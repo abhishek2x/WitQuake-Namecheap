@@ -1,0 +1,90 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>About ! Witquake</title>
+    <meta name="description" content="Explore impress.js in 3D" />
+    <meta name="author" content="Abhishek Srivastava" />
+    <link rel="stylesheet" href="{% static 'css/impress-common.css' %}">
+    <link rel="stylesheet" href="{% static 'css/3D-rotations.css' %}">
+</head>
+<div class="containerVid">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+</div>
+
+<div class="main-data preload-finished">
+
+<body class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a
+            simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+
+    <div id="impress" data-transition-duration="2000">
+
+
+        <div id="overview" class="step overview" data-x="1350" data-y="100" data-z="100" data-scale="3"
+            data-rotate-y="90">
+            <h1>Witquake About Page</h1>
+        </div>
+        <div id="overview2" class="step overview" data-x="2018" data-y="106" data-z="3018" data-scale="2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi consectetur debitis, ducimus hic in ipsam iure molestias, perspiciatis, quidem tempora velit veniam voluptatibus. Accusamus aliquid aut consectetur consequatur consequuntur doloribus ducimus et excepturi illo, inventore laboriosam libero magni nesciunt numquam odit placeat quae quaerat quam sequi soluta temporibus voluptatum!
+        </div>
+
+        <div id="step-1" class="step" data-x="0" data-y="0" data-z="0" data-goto-prev="step-8">
+            <p>Slide one</p>
+        </div>
+
+        <div id="step-2" class="step" data-x="420" data-y="-70" data-z="-250" data-rotate-z="45" data-rotate-y="-45"
+            data-rotate-order="zyx">
+            <p>Slide two</p>
+        </div>
+
+        <div id="step-3" class="step" data-x="700" data-y="350" data-z="-350" data-rotate-z="90" data-rotate-y="-90"
+            data-rotate-order="zyx">
+            <p>Slide three</p>
+        </div>
+
+        <div id="step-4" class="step" data-x="422" data-y="780" data-z="-250" data-rotate-z="135" data-rotate-y="-135"
+            data-rotate-order="zyx">
+            <p>Slide four</p>
+        </div>
+
+        <div id="step-5" class="step" data-x="0" data-y="702" data-z="0" data-rotate-z="180" data-rotate-y="-180"
+            data-rotate-order="zyx">
+            <p>Slide five</p>
+        </div>
+
+        <div id="step-6" class="step" data-x="379" data-y="780" data-z="270" data-rotate-z="135" data-rotate-y="-225"
+            data-rotate-order="zyx">
+            <p>Slide six</p>
+        </div>
+
+        <div id="step-7" class="step" data-x="700" data-y="350" data-z="350" data-rotate-z="90" data-rotate-y="-270"
+            data-rotate-order="zyx">
+            <p>Slide seven</p>
+        </div>
+
+        <div id="step-8" class="step" data-x="379" data-y="-70" data-z="270" data-rotate-z="45" data-rotate-y="-315"
+            data-rotate-order="zyx" data-goto-next="step-1">
+            <p>Slide eight</p>
+        </div>
+    </div>
+
+    <div id="impress-toolbar"></div>
+    <div id="impress-help"></div>
+
+    <script type="text/javascript" src="/static/js/impress.js"></script>
+
+    <script>impress().init();</script>
+
+</body>
+</div>
+</html>

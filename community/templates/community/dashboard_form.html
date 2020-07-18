@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+{% if request.user == user %}
+    <div class="container">
+    <h1>Dashboard Edit</h1>
+        <form class="" enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            {{ form | crispy }}
+            <input class="btn btn-dark my-3" type="submit" />
+        </form>
+    </div>
+{% else %}
+    <h2 class="text-danger">You cannot edit someone else's profile</h2>
+    <a href="/forum/question" class="btn btn-outline-secondary">Back</a>
+{% endif %}
+</body>
+
+</html>
+
+
+{% endblock %}

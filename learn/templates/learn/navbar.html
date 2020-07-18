@@ -1,0 +1,48 @@
+
+
+        <nav id="NAvNAv" class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm transparent navbar-short">
+
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <a class="menu-logo" href="{% url 'index' %}">
+                <div class="navbar-brand">
+                    <span class="navbar-logo">
+
+                        <img src="/static/images/main_logo.png" alt="WitQuake" title=""
+                            style="width: 6rem; height: 6rem!important;">
+
+                    </span>
+                </div>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                    <li class="nav-item"><a class="nav-link link text-white display-4"
+                            href="{% url 'index' %}#timeline1-5z">Why WitQuake?&nbsp;</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link link text-white display-4"
+                            href="{% url 'services' %}">Services&nbsp;</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link link text-white display-4"
+                            href="{% url 'contact' %}">Contact Us&nbsp;</a>
+                    </li>
+                </ul>
+                <div class="navbar-buttons mbr-section-btn">
+                    <a class="btn btn-sm btn-color text-white display-4" style="background-color: #149dcc;"
+                        href="{% url 'education' %}">Educations
+                    </a>
+                </div>
+                <div class="navbar-buttons mbr-section-btn">
+                    <a class="btn btn-sm btn-color text-white display-4" style="background-color: #19e035"
+                        href="{% url 'forum' %}">Forum
+                    </a>
+                </div>
+            </div>
+        </nav>

@@ -1,0 +1,38 @@
+/* div{
+    border: 1px solid white;
+} */
+
+div.question{
+    background-color: rgb(59, 50, 50);
+}
+
+form > textarea{
+    width: 90%;
+    height: 100px;
+    background-color: #292e33;
+    border: none;
+    color: #36f036;
+    height: fit-content;
+    padding: 10px;
+    margin: 20px auto;
+    display:block;
+    box-sizing: padding-box;
+    overflow:hidden;
+}
+
+h4{
+    color: white;
+}
+
+svg{
+    color: white;
+}
+
+fa{
+    font-family: 'font awesome';
+   }
+
+
+p.name{
+    color: #36f036 !important;
+}

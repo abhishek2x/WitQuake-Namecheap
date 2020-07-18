@@ -1,0 +1,84 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: Quicksand;
+
+}
+
+
+body{
+    background-color: #1e2125;
+}
+
+
+footer.container-fluid.footer{
+    margin: 0%;
+    border-radius: 0%;
+    background-color: #000000;
+}
+
+a, h5, p, h1, h2, h3, ul, hr, label{
+    color: white !important;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: white;
+}
+
+div.content{
+    background-color: #000;
+}
+
+ul > li{
+    margin: 10px;
+}
+
+ul > li > a{
+    color: #ffffff !important;
+}
+
+ul > li > a.name{
+    color: #36f036 !important;
+    margin: auto;
+}
+
+ul > li :hover{
+    color: #36f036 !important;
+    margin: auto;
+}
+
+hr{
+      width: auto;
+      border-top: rgb(88, 87, 87) 2px solid !important;
+}
+
+#pagi{
+    background-color: #1e2125 !important;
+    margin: 0px;
+    padding: 10px;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #36f036;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #36f036;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #36f036;
+}

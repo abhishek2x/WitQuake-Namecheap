@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2 class="p-4">{{dashboard.name}}'s dashboard</h2>
+<div class="row">
+    <div class="col-md-5 container p-5">
+        <p>NAME       --> {{dashboard.name}}</p>
+        <p>AGE        --> {{dashboard.age}}</p>
+        <p>GENDER     --> {{dashboard.gender}}</p>
+        <p>PROFESSION --> {{dashboard.profession}}</p>
+        <p>BIO        --> {{dashboard.description}}</p>
+        <p>COUNTRY    --> {{dashboard.country}}</p>
+        <hr>
+    {% if request.user ==  dashboard.user %}
+    <a href="/forum/dashboard/edit/{{user.dashboard.id}}" class="btn btn-md btn-outline-secondary">Edit</a>
+    {% endif %}
+    <a href="/forum/question" class="btn btn-outline-secondary">Back</a>
+    </div>
+    <div class="col-md-5 container m-3">
+        <br><img src="/static/images/{{dashboard.image}}" alt="{{dashboard.name}}'s Image" height="240px" width="240px">
+    </div>
+</div>
+
+{% endblock %}

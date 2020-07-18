@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!--Custom CSS -->
+<link rel="stylesheet" href="{% static 'css/question_details.css' %}">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+
+<div class="container p-5">
+  <h2>{{question.title}}</h2>
+
+  <div class="text-right">
+    <a href="/forum/question/edit/{{question.id}}" class="btn btn-md btn-outline-secondary">Edit</a>
+  </div>
+  <p class="text-muted">Asked by : @{{question.uploaded_by}}</p>
+  <p class="text-muted">Asked : {{question.cr_date}}</p>
+  <div class="container question">
+    <p class="text-break p-3"> Question : {{question.description}}</p>
+  </div>
+  <div>
+    <a class="tags">{{n1.tag1}}</a>
+    <a class="tags">{{n1.tag2}}</a>
+    <a class="tags">{{n1.tag3}}</a>
+  </div>
+
+</div>
+<div class="container">
+
+  <!-- Ajax form -->
+  <!-- <form action="" id="controls" >
+      {% csrf_token %}
+      <p id="quesbox" name="quesid" style="visibility: hidden;">{{question.id}}</p>
+      <textarea id="textbox" placeholder="Your Answer..." name="replymsg"></textarea>
+      <div class="text-right">
+        <button class="btn btn-outline-success" id="send" type="submit">send</button>
+      </div>
+    </form> -->
+
+  <!-- Redirect Form -->
+
+  <form id="controls" action="upload">
+    <!-- {% csrf_token %}//// -->
+    <textarea id="quesbox" name="quesid" style="height: 10px; visibility: hidden;">{{question.id}}</textarea>
+    <textarea id="textbox" placeholder="Your Answer..." name="replymsg"></textarea>
+    <div class="text-right">
+      <input class="btn btn-outline-success" id="send" type="submit" value="Submit">
+    </div>
+  </form>
+
+
+  <h4>Answers : </h4>
+  <div class="container row">
+    {% for b in blg %}
+
+
+    <div class="col-md-1">
+      <!-- <span class="fa fa-sort-asc fa-2x" aria-hidden="true"></span> -->
+      <!-- <i class="fa fa-sort-desc fa-2x" aria-hidden="true"></i> -->
+    </div>
+
+    <div class="col-md-11">
+      <!-- {% if b.to.id == question.id %} -->
+      <div class="container">
+        {% if b.reply %}
+        <!-- <p>{{b.to}}</p> -->
+        <p class="name">{{b.by}}</p>
+        <p class="text-muted">{{b.cr_date}}</p>
+        <p>{{b.reply}}</p>
+        {% endif %}
+      </div>
+      <hr>
+      <!-- {%  endif %} -->
+    </div>
+
+
+    {% endfor %}
+  </div>
+</div>
+
+<div class="container p-4">
+  <a href="/forum/question" class="btn btn-md btn-outline-secondary">Back</a>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+
+<script>
+  $("textarea").keyup(function (e) {
+    $(this).height(30);
+    $(this).height(this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth")));
+  });
+</script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"></script>
+<!-- <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script> -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+{% endblock %}

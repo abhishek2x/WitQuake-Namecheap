@@ -1,0 +1,35 @@
+*, body, html{
+    /*font-family: Exo;*/
+}
+
+img.members{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    color: white;
+}
+
+table{
+    width: 100%;
+}
+
+td, tr, th, thead, tbody{
+    color: white;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    color: white;
+}
+
+div.col.col-md-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    color: gray !important;
+    padding: 18px !important;
+}
+
+caption{
+    color: white;
+}
